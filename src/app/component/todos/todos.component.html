@@ -8,11 +8,11 @@
         <span [ngClass]="{completedTodo : todo.isCompleted}">
             {{todo.title | uppercase}}
         </span>
-        <span>
+        <span [ngClass]="{completedTodo : todo.isCompleted}">
             {{todo.date | date}}
         </span>
         <span>
-            <p (click)="deleteTodo(todo)">Trash</p>
+            <fa-icon [icon]="faTrashAlt" (click)="deleteTodo(todo)">Trash</fa-icon>
         </span>
     </li>
 </ul>
